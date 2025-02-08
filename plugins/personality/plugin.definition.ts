@@ -6,12 +6,12 @@ export default new sdk.PluginDefinition({
   version: '0.0.1',
   configuration: {
     schema: sdk.z.object({
-      model: sdk.z.string().describe('Model to use to handle bot personality'),
+      model: sdk.z.string().describe('Creates bot personality.'),
       personality: sdk.z
         .string()
         .max(1000)
         .describe(
-          'Describe what your chatbot is meant to do and how it should behave. You can include some personality traits here as well to influence how the chatbot will respond. Expressions are supported.'
+          'Describe what your chatbot is meant to do, and how it should behave. You can include some new personality traits here as well to influence how the chatbot will respond. Expressions are supported.'
         ),
     }),
   },
