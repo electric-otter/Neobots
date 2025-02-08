@@ -33,7 +33,7 @@ const main = async () => {
   const listTablesCmd = new dynamodb.ListTablesCommand({})
   const listTablesRes = await ddbClient.send(listTablesCmd)
   if (listTablesRes.TableNames?.includes(table_name)) {
-    console.info(`Table ${table_name} already exists. Skipping creation.`)
+    console.info(`Table ${table_name} already exists. Not creating ${table_name}.`)
     return
   }
 
